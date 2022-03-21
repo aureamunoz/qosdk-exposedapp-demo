@@ -1,0 +1,6 @@
+apiVersion: "halkyon.io/v1alpha1"
+kind: ExposedApp
+metadata:
+  name: hello-quarkus
+spec:
+  imageRef: amunozhe/getting-started-jvm
