@@ -29,7 +29,6 @@ public class ExposedAppReconciler implements Reconciler<ExposedApp> {
   public UpdateControl<ExposedApp> reconcile(ExposedApp exposedApp, Context context) {
     // TODO: fill in logic for creating Deployment, Service and Ingress resources
     String name1 = exposedApp.getMetadata().getName();
-    System.out.println("----------------------------------------------- se ejecuta esta linea resource: "+ name1);
 //    ExposedAppStatus status = new ExposedAppStatus();
 //    status.setStatus(name);
 //    resource.setStatus(status);
