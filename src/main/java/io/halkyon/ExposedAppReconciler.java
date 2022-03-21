@@ -83,6 +83,7 @@ public class ExposedAppReconciler implements Reconciler<ExposedApp> {
             .withMetadata(metadata)
             .withNewSpec()
             .addNewRule()
+            .withHost("hello-quarkus.127.0.0.1.nip.io")
             .withNewHttp()
             .addNewPath()
             .withPath("/")
