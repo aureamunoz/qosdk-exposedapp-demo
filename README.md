@@ -119,11 +119,6 @@ public class ExposedAppReconciler implements Reconciler<ExposedApp> {
   @Override
   public UpdateControl<ExposedApp> reconcile(ExposedApp exposedApp, Context context) {
     // TODO: fill in logic for creating Deployment, Service and Ingress resources
-    String name1 = exposedApp.getMetadata().getName();
-//    ExposedAppStatus status = new ExposedAppStatus();
-//    status.setStatus(name);
-//    resource.setStatus(status);
-//    return UpdateControl.updateStatus(resource);
     final var name=exposedApp.getMetadata().getName();
     final var spec=exposedApp.getSpec();
     final var imageRef=spec.getImageRef();
