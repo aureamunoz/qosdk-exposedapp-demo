@@ -1,7 +1,10 @@
 # ExposedApp Java Operator
 
-This example shows how an operator can deploy a microservice application. To deploy this microservice in K8s, three Kubernetes resources are needed: the Deployment and an associated Service at the very least but also an Ingress if you intend to access the application from outside the cluster (or Route if the target cluster is OpenShift).
-So what this project is an operator that will take ExposedApp custom resources and behind the scenes will create the K8s resources. Using this operator a dev team can create a CR in their namespace and move their application to a cloud destination.
+This project shows how an operator written in java can deploy a [Quarkus](https://quarkus.io/) microservice application. This project is described in detail in a Red Hat Developer blog series. You can check the part one [here](https://developers.redhat.com/articles/2022/02/15/write-kubernetes-java-java-operator-sdk?source=sso#) and the second part in [this link](https://developers.redhat.com/articles/2022/03/22/write-kubernetes-java-java-operator-sdk-part-2).  
+To deploy this microservice in K8s, three Kubernetes resources are needed: the Deployment and an associated Service at the very least but also an Ingress if you intend to 
+access the application from outside the cluster (or Route if the target cluster is OpenShift).
+So what this project is an operator that will take ExposedApp custom resources and behind the scenes will create the K8s resources. 
+Using this operator a dev team can create a CR in their namespace and move their application to a cloud destination.
 The following diagram shows the architecture of this scenario:
 
 ![ExposedApp operator scenario](exposedapp-operator-architecture.png)
@@ -240,6 +243,7 @@ spec:
   imageRef: amunozhe/getting-started-jvm
 
 ```
+The `imageRef` field points to the Quarkus microservice application container image described in the Prerequisites.
 
 8 - Apply the Custom Resource to the cluster by running the following command:
 ```shell
